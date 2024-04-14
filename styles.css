@@ -162,6 +162,7 @@ input:focus:invalid {
   outline: none;
   background-color: rgba(255, 0, 0, 0.089);
 }
+
 input:focus:valid {
   outline: none;
   background-color: rgba(8, 114, 235, 0.171);
