@@ -1,0 +1,67 @@
+@font-face {
+  font-family: NorseBold;
+  src: url(./assets/fonts/Norse-Bold.otf);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #e7e7e7;
+}
+.helvetica {
+  font-family: Helvetica, system-ui;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+#banner {
+  background-image: url(./assets/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  justify-content: space-between;
+  height: 100vh;
+  width: 30vw;
+}
+#banner > header {
+  align-items: center;
+  justify-content: center;
+  margin-top: 13rem;
+  padding: 1em;
+  background-color: #00000054;
+}
+#banner > header > img {
+  height: auto;
+  width: 100px;
+}
+#banner > header > h1 {
+  color: #fff;
+  font-family: NorseBold;
+  font-size: 5rem;
+  margin-left: 10px;
+}
+#banner > p {
+  font-size: 1rem;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+#banner > p > a {
+  text-decoration: none;
+  color: rgb(121, 184, 255);
+}
+#banner > p > a:hover {
+  color: rgb(35, 129, 236);
+}
+#banner > p > a:active {
+  color: rgb(19, 106, 206);
+}
