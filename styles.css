@@ -1,28 +1,49 @@
 @font-face {
-  font-family: NorseBold;
-  src: url(./assets/fonts/Norse-Bold.otf);
+  font-family: "norsebold";
+  src: url("./assets/fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "robotomedium";
+  src: url("./assets/fonts/roboto-medium-webfont.woff2") format("woff2"),
+    url("./assets/fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --padding: 1rem 4rem;
+  --font: robotomedium, sans-serif;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
-  background-color: #e7e7e7;
+  background-color: #f7f7f7;
+  font-family: robotomedium, sans-serif;
 }
-.helvetica {
-  font-family: Helvetica, system-ui;
-}
+
 .flex {
   display: flex;
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 #banner {
   background-image: url(./assets/images/bg.jpg);
   background-size: cover;
@@ -32,36 +53,167 @@ body {
   height: 100vh;
   width: 30vw;
 }
-#banner > header {
+
+#banner > div {
   align-items: center;
   justify-content: center;
-  margin-top: 13rem;
-  padding: 1em;
+  margin-top: 10rem;
+  padding: 1rem;
   background-color: #00000054;
 }
-#banner > header > img {
+
+#banner > div > img {
   height: auto;
   width: 100px;
 }
-#banner > header > h1 {
+
+#banner > div > p {
   color: #fff;
-  font-family: NorseBold;
+  font-family: norsebold, sans-serif;
   font-size: 5rem;
   margin-left: 10px;
 }
+
 #banner > p {
   font-size: 1rem;
   text-align: center;
   color: #ccc;
   margin-bottom: 2rem;
 }
-#banner > p > a {
+
+a {
   text-decoration: none;
   color: rgb(121, 184, 255);
 }
-#banner > p > a:hover {
+
+a:hover {
   color: rgb(35, 129, 236);
 }
-#banner > p > a:active {
+
+a:active {
   color: rgb(19, 106, 206);
+}
+
+main {
+  justify-content: center;
+  flex: 2;
+}
+
+main > p {
+  font-size: 1.3rem;
+  padding: var(--padding);
+  width: 50%;
+}
+
+main > p > span {
+  font-style: italic;
+}
+
+main > p:last-child {
+  font-size: 1rem;
+}
+
+form > p,
+.form-row {
+  background-color: #fff;
+}
+
+form > p {
+  padding: 2rem 4rem;
+  font-size: 1.4rem;
+}
+
+.form-row {
+  gap: 4rem;
+  padding: 0 4rem;
+  padding-bottom: 2em;
+}
+
+.form-row > div {
+  width: 400px;
+}
+
+label {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+label > span {
+  font-size: 0.6rem;
+  color: red;
+}
+
+label[for="password"] {
+  position: relative;
+}
+
+label[for="password"]::after {
+  position: absolute;
+  content: "";
+  top: 65px;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+input {
+  padding: 0.6em;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:valid {
+  border: 1px solid rgb(8, 114, 235);
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+main > form > button {
+  width: 200px;
+  margin: 2rem 4rem;
+  margin-bottom: -0.2rem;
+  background-color: rgb(35, 129, 236);
+  border: none;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 1rem;
+  padding: 10px 30px;
+  transition: transform 150ms, box-shadow 150ms;
+  touch-action: manipulation;
+}
+
+main > form > button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+main > form > button:active {
+  background-color: rgb(8, 114, 235);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+}
+
+main > p > a {
+  text-decoration: none;
+  color: rgb(35, 129, 236);
+}
+
+main > p > a:hover {
+  color: rgb(70, 152, 245);
+}
+
+main > p > a:active {
+  color: rgb(19, 106, 206);
+}
+
+p,
+label {
+  user-select: none;
 }

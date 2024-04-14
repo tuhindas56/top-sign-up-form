@@ -8,11 +8,11 @@
   </head>
   <body class="flex">
     <div id="banner" class="flex flex-col">
-      <header class="flex">
+      <div class="flex">
         <img src="./assets/images/odin-lined.png" alt="" />
-        <h1>ODIN</h1>
-      </header>
-      <p class="helvetica">
+        <p>ODIN</p>
+      </div>
+      <p>
         Photo by
         <a href="https://unsplash.com/@thirdcultureken">Kentaro Toma</a>
         on
@@ -22,13 +22,78 @@
         >
       </p>
     </div>
-    <main class="flex flex-col helvetica">
+    <main class="flex flex-col">
       <p>
         This is not a real online service! You know you need something like this
         in your life to help you realize your deepest dreams. Sign up now to get
         started.
       </p>
       <p>You <span>know</span> you want to.</p>
+      <form action="#" method="post" class="flex flex-col">
+        <p>Let's do this!</p>
+        <div class="form-row flex">
+          <div class="flex flex-col">
+            <label for="firstName">FIRST NAME <span>*Required</span></label>
+            <input type="text" id="firstName" required />
+          </div>
+          <div class="flex flex-col">
+            <label for="lastName">LAST NAME</label>
+            <input type="text" id="lastName" />
+          </div>
+        </div>
+        <div class="form-row flex">
+          <div class="flex flex-col">
+            <label for="email">EMAIL <span>*Required</span></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="youremail@example.com"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="phone">PHONE NUMBER</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              pattern="\+[0-9]{1,3}\s?[0-9]{3,14}"
+              placeholder="+91 1234567890"
+            />
+          </div>
+        </div>
+        <div class="form-row flex">
+          <div class="flex flex-col">
+            <label for="password">PASSWORD <span>*Required</span></label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              pattern=".{8,16}"
+              placeholder="at least 8 characters"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="confirmPassword"
+              >CONFIRM PASSWORD <span>*Required</span></label
+            >
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              pattern=".{8,16}"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <p>
+        Already have an account?
+        <a href="#" target="_blank" rel="noopener noreferrer">Log in</a>
+      </p>
     </main>
   </body>
 </html>
