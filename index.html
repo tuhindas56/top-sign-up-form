@@ -18,8 +18,9 @@
         on
         <a
           href="https://unsplash.com/photos/silhouette-of-trees-and-mountains-during-daytime-5SrZfhkNdBo"
-          >Unsplash</a
         >
+          Unsplash
+        </a>
       </p>
     </div>
     <main class="flex flex-col">
@@ -74,10 +75,11 @@
               placeholder="at least 8 characters"
               required
             />
+            <span id="password-alert">*Passwords do not match!</span>
           </div>
           <div class="flex flex-col">
-            <label for="confirmPassword"
-              >CONFIRM PASSWORD <span>*Required</span></label
+            <label for="confirmPassword">
+              CONFIRM PASSWORD <span>*Required</span></label
             >
             <input
               type="password"
@@ -95,5 +97,21 @@
         <a href="#" target="_blank" rel="noopener noreferrer">Log in</a>
       </p>
     </main>
+    <script defer>
+      const password = document.querySelector("#password");
+      const confirmPassword = document.querySelector("#confirmPassword");
+      const passwordAlert = document.querySelector("#password-alert");
+
+      confirmPassword.addEventListener("input", () => {
+        if (password.value !== confirmPassword.value) {
+          passwordAlert.style.opacity = "100";
+          confirmPassword.style.border = "1px solid red";
+          console.log("INVALID");
+        } else {
+          passwordAlert.style.opacity = "0";
+          confirmPassword.style.border = "1px solid rgb(8, 114, 235)";
+        }
+      });
+    </script>
   </body>
 </html>
