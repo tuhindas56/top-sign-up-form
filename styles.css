@@ -145,25 +145,9 @@ label > span {
   color: red;
 }
 
-label[for="password"] {
-  position: relative;
-}
-
-label[for="password"]::after {
-  position: absolute;
-  content: "";
-  top: 65px;
-  left: 0;
-  font-size: 0.8rem;
-}
-
 input {
   padding: 0.6em;
   font-size: 1rem;
-}
-
-input:focus {
-  outline: none;
 }
 
 input:valid {
@@ -172,6 +156,15 @@ input:valid {
 
 input:invalid {
   border: 1px solid red;
+}
+
+input:focus:invalid {
+  outline: none;
+  background-color: rgba(255, 0, 0, 0.089);
+}
+input:focus:valid {
+  outline: none;
+  background-color: rgba(8, 114, 235, 0.171);
 }
 
 #password-alert {

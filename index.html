@@ -106,10 +106,14 @@
         if (password.value !== confirmPassword.value) {
           passwordAlert.style.opacity = "100";
           confirmPassword.style.border = "1px solid red";
-          console.log("INVALID");
         } else {
           passwordAlert.style.opacity = "0";
           confirmPassword.style.border = "1px solid rgb(8, 114, 235)";
+        }
+      });
+      document.querySelector("button").addEventListener("click", (event) => {
+        if (passwordAlert.style.opacity == "100") {
+          event.preventDefault();
         }
       });
     </script>
