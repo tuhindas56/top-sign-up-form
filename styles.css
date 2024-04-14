@@ -35,8 +35,7 @@ html {
 }
 
 body {
-  background-color: #1d1f20;
-  color: #ccc;
+  background-color: #f7f7f7;
   font-family: robotomedium, sans-serif;
 }
 
@@ -117,7 +116,7 @@ main > p:last-child {
 
 form > p,
 .form-row {
-  background-color: #1d1f20;
+  background-color: #fff;
 }
 
 form > p {
@@ -149,7 +148,6 @@ label > span {
 input {
   padding: 0.6em;
   font-size: 1rem;
-  background-color: #e8e6e3;
 }
 
 input:valid {
@@ -224,4 +222,18 @@ p,
 label,
 #password-alert {
   user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1d1f20;
+    color: #ccc;
+  }
+  form > p,
+  .form-row {
+    background-color: #18191a;
+  }
+  input {
+    background-color: #272727;
+  }
 }
