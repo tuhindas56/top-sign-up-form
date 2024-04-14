@@ -106,9 +106,11 @@
         if (password.value !== confirmPassword.value) {
           passwordAlert.style.opacity = "100";
           confirmPassword.style.border = "1px solid red";
+          confirmPassword.style.backgroundColor = "rgba(255, 0, 0, 0.089)";
         } else {
           passwordAlert.style.opacity = "0";
           confirmPassword.style.border = "1px solid rgb(8, 114, 235)";
+          confirmPassword.style.backgroundColor = "";
         }
       });
       document.querySelector("button").addEventListener("click", (event) => {

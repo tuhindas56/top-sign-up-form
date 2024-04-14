@@ -158,14 +158,14 @@ input:invalid {
   border: 1px solid red;
 }
 
-input:focus:invalid {
-  outline: none;
-  background-color: rgba(255, 0, 0, 0.089);
-}
-
 input:focus:valid {
   outline: none;
   background-color: rgba(8, 114, 235, 0.171);
+}
+
+input:focus:invalid {
+  outline: none;
+  background-color: rgba(255, 0, 0, 0.089);
 }
 
 #password-alert {
@@ -200,6 +200,10 @@ main > form > button:hover {
 main > form > button:active {
   box-shadow: bar(--box-shadow);
   background-color: rgb(8, 114, 235);
+}
+
+main > form > button:focus {
+  outline: none;
 }
 
 main > p > a {
