@@ -31,7 +31,7 @@
 }
 
 html {
-  font-size: clamp(12px, 0.8vw, 16px);
+  font-size: clamp(12px, 0.7vw + 1px, 16px);
 }
 
 body {

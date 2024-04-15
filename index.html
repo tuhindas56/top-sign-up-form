@@ -102,22 +102,30 @@
       const confirmPassword = document.querySelector("#confirmPassword");
       const passwordAlert = document.querySelector("#password-alert");
 
-      confirmPassword.addEventListener("input", () => {
-        if (password.value !== confirmPassword.value) {
-          passwordAlert.style.opacity = "100";
-          confirmPassword.style.border = "1px solid red";
-          confirmPassword.style.backgroundColor = "rgba(255, 0, 0, 0.089)";
-        } else {
-          passwordAlert.style.opacity = "0";
-          confirmPassword.style.border = "1px solid rgb(8, 114, 235)";
-          confirmPassword.style.backgroundColor = "";
-        }
-      });
+      password.addEventListener("input", checkPassword);
+      confirmPassword.addEventListener("input", checkPassword);
+
       document.querySelector("button").addEventListener("click", (event) => {
         if (passwordAlert.style.opacity == "100") {
           event.preventDefault();
         }
       });
+
+      function checkPassword() {
+        if (password.value !== confirmPassword.value) {
+          passwordAlert.style.opacity = "100";
+          password.style.border = "1px solid red";
+          password.style.backgroundColor = "rgba(255, 0, 0, 0.089)";
+          confirmPassword.style.border = "1px solid red";
+          confirmPassword.style.backgroundColor = "rgba(255, 0, 0, 0.089)";
+        } else {
+          passwordAlert.style.opacity = "0";
+          password.style.border = "1px solid rgb(8, 114, 235)";
+          password.style.backgroundColor = "";
+          confirmPassword.style.border = "1px solid rgb(8, 114, 235)";
+          confirmPassword.style.backgroundColor = "";
+        }
+      }
     </script>
   </body>
 </html>
