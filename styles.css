@@ -218,6 +218,7 @@ main > p > a:active {
   color: var(--blue-300);
 }
 
+img,
 p,
 label,
 #password-alert {
