@@ -31,7 +31,7 @@
 }
 
 html {
-  font-size: clamp(12px, 0.7vw + 1px, 16px);
+  font-size: clamp(12px, 0.7vw + 1px, 35px);
 }
 
 body {
@@ -176,7 +176,7 @@ input:focus:invalid {
 }
 
 main > form > button {
-  width: 200px;
+  width: clamp(200px, 10vw, 500px);
   margin: 2rem 4rem;
   margin-bottom: -0.2rem;
   background-color: var(--blue-200);
